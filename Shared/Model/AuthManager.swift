@@ -6,22 +6,18 @@
 //
 
 import Foundation
-let MyAuthManager = AuthManager()
+
+let myAuthManager = AuthManager()
 
 class AuthManager: ObservableObject{
     
+    
     var token = "hello"
+    var authHeader = "hello"
 
-    func test() {
-        print(token)
-    }
-    
-    func lock() {
-        print("Lock")
-    }
-    
-    func unlock(){
-        print("Unlock")
+    func UpdateToken(newToken: String){
+        token = newToken
+        authHeader = "Bearer " + token
     }
 }
 

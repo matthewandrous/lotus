@@ -13,13 +13,13 @@ struct ControlsView: View {
         VStack {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             Button(action: {
-                MyTaskManager.lock()
+                myTaskManager.lock()
             }) {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Button")/*@END_MENU_TOKEN@*/
                 Text("Lock")
             }
             Button(action: {
-                MyTaskManager.unlock()
+                myTaskManager.unlock()
             }) {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Button")/*@END_MENU_TOKEN@*/
                 Text("Unlock")

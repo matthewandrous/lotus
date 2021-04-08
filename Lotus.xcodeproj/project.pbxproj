@@ -111,6 +111,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7F836151261EBBC700A8A79D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC7548261D0AB1009E2C72 /* TaskManager.swift */,
+				7FAC7541261CFD02009E2C72 /* AuthManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7FAC74F3261CEBFE009E2C72 = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +135,12 @@
 		7FAC74F8261CEBFE009E2C72 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7F836151261EBBC700A8A79D /* Model */,
 				7F70BA96261EB619007FEC5E /* Views */,
 				7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */,
-				7FAC7548261D0AB1009E2C72 /* TaskManager.swift */,
 				7FAC74FD261CEBFE009E2C72 /* Persistence.swift */,
 				7FAC74FE261CEC00009E2C72 /* Assets.xcassets */,
 				7FAC74F9261CEBFE009E2C72 /* Lotus.xcdatamodeld */,
-				7FAC7541261CFD02009E2C72 /* AuthManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

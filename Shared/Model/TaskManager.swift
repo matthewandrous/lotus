@@ -7,10 +7,13 @@
 //
 
 import Foundation
-let MyTaskManager = TaskManager()
+
+let myTaskManager = TaskManager()
 
 //This class manages all the actual API calls
 class TaskManager{
+    
+    
     
     //this class is a singleton because you only need one
     //static let shared = TaskManager()
@@ -40,7 +43,7 @@ class TaskManager{
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer qts-6aea5426219af0d8a28da1c59ff8c133b74341f153a4cd7128dc97f94430c0a2", forHTTPHeaderField: "Authorization")
+        request.setValue(myAuthManager.authHeader, forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {
             return
         }
