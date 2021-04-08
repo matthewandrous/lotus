@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F83613E261EBA0C00A8A79D /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83613D261EBA0C00A8A79D /* AuthView.swift */; };
+		7F83613F261EBA0C00A8A79D /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83613D261EBA0C00A8A79D /* AuthView.swift */; };
 		7FAC7518261CEC00009E2C72 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7517261CEC00009E2C72 /* Tests_iOS.swift */; };
 		7FAC7523261CEC00009E2C72 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7522261CEC00009E2C72 /* Tests_macOS.swift */; };
 		7FAC7525261CEC00009E2C72 /* Lotus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74F9261CEBFE009E2C72 /* Lotus.xcdatamodeld */; };
 		7FAC7526261CEC00009E2C72 /* Lotus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74F9261CEBFE009E2C72 /* Lotus.xcdatamodeld */; };
 		7FAC7527261CEC00009E2C72 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */; };
 		7FAC7528261CEC00009E2C72 /* LotusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */; };
-		7FAC7529261CEC00009E2C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FC261CEBFE009E2C72 /* ContentView.swift */; };
-		7FAC752A261CEC00009E2C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FC261CEBFE009E2C72 /* ContentView.swift */; };
 		7FAC752B261CEC00009E2C72 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FD261CEBFE009E2C72 /* Persistence.swift */; };
 		7FAC752C261CEC00009E2C72 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74FD261CEBFE009E2C72 /* Persistence.swift */; };
 		7FAC752D261CEC00009E2C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC74FE261CEC00009E2C72 /* Assets.xcassets */; };
@@ -23,6 +23,10 @@
 		7FAC7543261CFD02009E2C72 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7541261CFD02009E2C72 /* AuthManager.swift */; };
 		7FAC7549261D0AB1009E2C72 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7548261D0AB1009E2C72 /* TaskManager.swift */; };
 		7FAC754A261D0AB1009E2C72 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7548261D0AB1009E2C72 /* TaskManager.swift */; };
+		7FAC7564261E5BBD009E2C72 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7563261E5BBD009E2C72 /* ControlsView.swift */; };
+		7FAC7565261E5BBD009E2C72 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7563261E5BBD009E2C72 /* ControlsView.swift */; };
+		7FAC756B261EB26B009E2C72 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC756A261EB26B009E2C72 /* MainView.swift */; };
+		7FAC756C261EB26B009E2C72 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC756A261EB26B009E2C72 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F83613D261EBA0C00A8A79D /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7FAC74FA261CEBFE009E2C72 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
-		7FAC74FC261CEBFE009E2C72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FAC74FD261CEBFE009E2C72 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7FAC74FE261CEC00009E2C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FAC7503261CEC00009E2C72 /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +65,8 @@
 		7FAC7524261CEC00009E2C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FAC7541261CFD02009E2C72 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		7FAC7548261D0AB1009E2C72 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		7FAC7563261E5BBD009E2C72 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		7FAC756A261EB26B009E2C72 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F70BA96261EB619007FEC5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC756A261EB26B009E2C72 /* MainView.swift */,
+				7FAC7563261E5BBD009E2C72 /* ControlsView.swift */,
+				7F83613D261EBA0C00A8A79D /* AuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7FAC74F3261CEBFE009E2C72 = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +126,9 @@
 		7FAC74F8261CEBFE009E2C72 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7FAC7548261D0AB1009E2C72 /* TaskManager.swift */,
+				7F70BA96261EB619007FEC5E /* Views */,
 				7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */,
-				7FAC74FC261CEBFE009E2C72 /* ContentView.swift */,
+				7FAC7548261D0AB1009E2C72 /* TaskManager.swift */,
 				7FAC74FD261CEBFE009E2C72 /* Persistence.swift */,
 				7FAC74FE261CEC00009E2C72 /* Assets.xcassets */,
 				7FAC74F9261CEBFE009E2C72 /* Lotus.xcdatamodeld */,
@@ -325,10 +341,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FAC7549261D0AB1009E2C72 /* TaskManager.swift in Sources */,
+				7FAC756B261EB26B009E2C72 /* MainView.swift in Sources */,
 				7FAC7525261CEC00009E2C72 /* Lotus.xcdatamodeld in Sources */,
 				7FAC752B261CEC00009E2C72 /* Persistence.swift in Sources */,
+				7FAC7564261E5BBD009E2C72 /* ControlsView.swift in Sources */,
+				7F83613E261EBA0C00A8A79D /* AuthView.swift in Sources */,
 				7FAC7527261CEC00009E2C72 /* LotusApp.swift in Sources */,
-				7FAC7529261CEC00009E2C72 /* ContentView.swift in Sources */,
 				7FAC7542261CFD02009E2C72 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,10 +356,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FAC754A261D0AB1009E2C72 /* TaskManager.swift in Sources */,
+				7FAC756C261EB26B009E2C72 /* MainView.swift in Sources */,
 				7FAC7526261CEC00009E2C72 /* Lotus.xcdatamodeld in Sources */,
 				7FAC752C261CEC00009E2C72 /* Persistence.swift in Sources */,
+				7FAC7565261E5BBD009E2C72 /* ControlsView.swift in Sources */,
+				7F83613F261EBA0C00A8A79D /* AuthView.swift in Sources */,
 				7FAC7528261CEC00009E2C72 /* LotusApp.swift in Sources */,
-				7FAC752A261CEC00009E2C72 /* ContentView.swift in Sources */,
 				7FAC7543261CFD02009E2C72 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

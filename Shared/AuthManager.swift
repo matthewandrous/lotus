@@ -8,7 +8,7 @@
 import Foundation
 let MyAuthManager = AuthManager()
 
-class AuthManager{
+class AuthManager: ObservableObject{
     
     var token = "hello"
 
