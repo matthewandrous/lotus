@@ -167,12 +167,12 @@ class TaskManager{
     func lock() -> String{
         print("hello world")
         
-        configRequest(command: "/command/door_lock", httpMethod: "POST")
+        configRequest(command: "/api/1/vehicles/\(myAccount.selectedVehicleID)/command/door_lock", httpMethod: "POST")
         return "lock called"
     }
     
     func unlock() -> String{
-        configRequest(command: "/command/door_unlock", httpMethod: "POST")
+        configRequest(command: "/api/1/vehicles/\(myAccount.selectedVehicleID)/command/door_unlock", httpMethod: "POST")
         return "hello world"
     }
 

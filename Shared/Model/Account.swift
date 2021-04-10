@@ -15,6 +15,7 @@ class Account: ObservableObject{
     var token = "hello"
     var authHeader = "hello"
     var cars = [Car]()
+    var selectedVehicleID = "0"
 
     func UpdateToken(newToken: String){
         token = newToken
@@ -86,6 +87,7 @@ class Account: ObservableObject{
             use_range_badging: use_range_badging,
             wheel_type: wheel_type
         )
+        selectedVehicleID = myCar.id!
         cars.append(myCar)
         print("total number of cars")
         print(cars.count)
