@@ -8,7 +8,7 @@
 import Foundation
 
 class Car{
-    
+    var id: String?
     var can_accept_navigation_requests: Bool?
     var can_actuate_trunks: Bool?
     var car_special_type: String?
@@ -37,6 +37,7 @@ class Car{
     var wheel_type: String?
     
     init(
+        id: String,
         can_accept_navigation_requests: Bool,
         can_actuate_trunks: Bool,
         car_special_type: String,
@@ -64,6 +65,7 @@ class Car{
         use_range_badging: Bool,
         wheel_type: String
     ) {
+        self.id = id
         self.can_accept_navigation_requests = can_accept_navigation_requests
         self.can_actuate_trunks = can_actuate_trunks
         self.car_special_type = car_special_type
@@ -100,6 +102,6 @@ class Car{
         print("Wheel Type")
         print(wheel_type)
         print("Car Type")
-        print(wheel_type)
+        print(car_type)
     }
 }

@@ -20,13 +20,16 @@ class Account: ObservableObject{
         token = newToken
         authHeader = "Bearer " + token
         
-        print("Calling myTaskManager.getConfig()")
-        var myDictionary = myTaskManager.getConfig() 
-        print("printing dictionary")
-        print(myDictionary)
+        myTaskManager.getCars()
+        
+//        print("Calling myTaskManager.getConfig()")
+//        var myDictionary = myTaskManager.getConfig()
+//        print("printing dictionary")
+//        print(myDictionary)
     }
     
     func addCar(
+        id: String,
         can_accept_navigation_requests: Bool,
         can_actuate_trunks: Bool,
         car_special_type: String,
@@ -55,6 +58,7 @@ class Account: ObservableObject{
         wheel_type: String
     ){
         let myCar = Car(
+            id: id,
             can_accept_navigation_requests: can_accept_navigation_requests,
             can_actuate_trunks: can_actuate_trunks,
             car_special_type: car_special_type,
