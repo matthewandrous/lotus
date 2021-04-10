@@ -25,7 +25,9 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(AuthManager())
+        MainView().environmentObject(Account())
         
     }
 }
+
+//qts-6aea5426219af0d8a28da1c59ff8c133b74341f153a4cd7128dc97f94430c0a2
