@@ -17,7 +17,8 @@ struct AuthView: View {
             TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $token)
             
             Button(action: {
-                myAuthManager.UpdateToken(newToken: token)
+                myAccount.UpdateToken(newToken: token)
+//                myAccount.addCar()
             }) {
                 Text("Authenticate")
             }
