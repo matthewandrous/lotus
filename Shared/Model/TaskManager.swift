@@ -13,13 +13,6 @@ let myTaskManager = TaskManager()
 //This class manages all the actual API calls
 class TaskManager{
     
-    
-    
-    //this class is a singleton because you only need one
-    //static let shared = TaskManager()
-
-    //session is static because there will only be one for the whole app
-    //and not each instance of the Task Manager (in fact there won't be instances)
     let session: URLSession = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30 // seconds
@@ -27,12 +20,11 @@ class TaskManager{
         return URLSession(configuration: configuration)
     }()
     
-    //this is the base URL that all commands go to
     //static let baseURL = "https://owner-api.teslamotors.com/api/1/vehicles/145050237128"
     static let baseURL = "https://owner-api.teslamotors.com/"
     
 
-    //this function configures requests
+    ///This function is responsible for making generic HTTP requests.
     //TODO: See if this can not be optional even in fail
     func configRequest(command: String, httpMethod: String) {
         
@@ -69,7 +61,8 @@ class TaskManager{
         
     }
     
-    func configRequest2(command: String, httpMethod: String) {
+    ///This is the function that creates the HTTP request to get the configuratio for each car. It get's called once per car.
+    func getConfigRequest(command: String, httpMethod: String) {
         
         //configure the URL
         let url = URL(string: (TaskManager.baseURL + command))!
@@ -109,14 +102,14 @@ class TaskManager{
 //        print(myDictionary)
     }
     
-    func configRequest3(command: String, httpMethod: String) {
+    ///This is the function that creates the HTTP request to get all the vehicles. It get's called
+    func getVehiclesRequest(command: String, httpMethod: String) {
         
-        //configure the URL
         let url = URL(string: (TaskManager.baseURL + command))!
         
         let parameters: [String: Any] = [:]
         
-        //configuring the request
+        ///configuring the request
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
@@ -132,27 +125,12 @@ class TaskManager{
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    //print("printing JSON")
-                    //print(json)
+
                     let jsonData = json as! [String:Any]
-                    //print("11111")
-                    //print(jsonData["response"])
                     var md = jsonData["response"] as! [[String:Any]]
-                    //print("22222")
-                    //print(md.count)
-                    //print(md[0])
-                    
                     for car in md {
-                        var xd = car
-                        //print(xd["id_s"])
-                        var id = xd["id_s"]
-                        
-                        //XD IS THE VEHICLE ID
-                        self.getConfig(id: id as! String)
+                        self.getConfig(id: car["id_s"] as! String)
                     }
-                    
-                    
-                    
                     
                 } catch {
                     print(error)
@@ -164,6 +142,7 @@ class TaskManager{
     }
     
     
+    ///The following functions are all  controls for the car
     func lock() -> String{
         print("hello world")
         
@@ -175,15 +154,20 @@ class TaskManager{
         configRequest(command: "/api/1/vehicles/\(myAccount.selectedVehicleID)/command/door_unlock", httpMethod: "POST")
         return "hello world"
     }
+    
+    func setSentryMode(mode: Bool){
+        configRequest(command: "/api/1/vehicles/\(myAccount.selectedVehicleID)/command/set_sentry_mode", httpMethod: "POST")
+    }
+    
 
     func getConfig(id: String){
         print("hello world")
-        configRequest2(command: "/api/1/vehicles/\(id)/data_request/vehicle_config", httpMethod: "GET")
+        getConfigRequest(command: "/api/1/vehicles/\(id)/data_request/vehicle_config", httpMethod: "GET")
     }
     
     func getCars(){
         print("in getCars()")
-        configRequest3(command: "/api/1/vehicles", httpMethod: "GET")
+        getVehiclesRequest(command: "/api/1/vehicles", httpMethod: "GET")
     }
 
 }

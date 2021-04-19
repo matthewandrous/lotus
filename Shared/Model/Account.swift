@@ -4,10 +4,17 @@
 //
 //  Created by Matthew Androus on 4/6/21.
 //
+///
+
+
+
 
 import Foundation
 
 let myAccount = Account()
+///This class is a singleton because there is one per app.
+///One `Account` Object is tied to one Tesla Account.
+///Each `Account` can have multiple `Car` Objects.
 
 class Account: ObservableObject{
     
@@ -21,14 +28,11 @@ class Account: ObservableObject{
         token = newToken
         authHeader = "Bearer " + token
         
+        ///GetCars is always called after getting a new token.
         myTaskManager.getCars()
-        
-//        print("Calling myTaskManager.getConfig()")
-//        var myDictionary = myTaskManager.getConfig()
-//        print("printing dictionary")
-//        print(myDictionary)
     }
     
+    ///Simple creates an instance of `Car` and appends it to the `cars` array
     func addCar(
         id: String,
         can_accept_navigation_requests: Bool,
