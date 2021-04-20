@@ -17,6 +17,7 @@ class AuthManager: ObservableObject{
     
     init(){
         authHeader = "Bearer " + (KeychainWrapper.standard.string(forKey: "Token") ?? "no-token")
+        print("AuthManager init() called")
     }
     
 

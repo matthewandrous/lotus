@@ -13,6 +13,10 @@
 		7F8FCB20262E558900F54717 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB1E262E558800F54717 /* KeychainWrapper.swift */; };
 		7F8FCB26262E55C300F54717 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB25262E55C300F54717 /* KeychainItemAccessibility.swift */; };
 		7F8FCB27262E55C300F54717 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB25262E55C300F54717 /* KeychainItemAccessibility.swift */; };
+		7F8FCB5A262F927900F54717 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB58262F927900F54717 /* Account.swift */; };
+		7F8FCB5B262F927900F54717 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB58262F927900F54717 /* Account.swift */; };
+		7F8FCB5C262F927900F54717 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB59262F927900F54717 /* Car.swift */; };
+		7F8FCB5D262F927900F54717 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FCB59262F927900F54717 /* Car.swift */; };
 		7FAC7518261CEC00009E2C72 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7517261CEC00009E2C72 /* Tests_iOS.swift */; };
 		7FAC7523261CEC00009E2C72 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC7522261CEC00009E2C72 /* Tests_macOS.swift */; };
 		7FAC7525261CEC00009E2C72 /* Lotus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC74F9261CEBFE009E2C72 /* Lotus.xcdatamodeld */; };
@@ -54,6 +58,8 @@
 		7F83613D261EBA0C00A8A79D /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7F8FCB1E262E558800F54717 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		7F8FCB25262E55C300F54717 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		7F8FCB58262F927900F54717 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		7F8FCB59262F927900F54717 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		7FAC74FA261CEBFE009E2C72 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		7FAC74FB261CEBFE009E2C72 /* LotusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusApp.swift; sourceTree = "<group>"; };
 		7FAC74FD261CEBFE009E2C72 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 		7F836151261EBBC700A8A79D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7F8FCB58262F927900F54717 /* Account.swift */,
+				7F8FCB59262F927900F54717 /* Car.swift */,
 				7FAC7548261D0AB1009E2C72 /* TaskManager.swift */,
 				7FAC7541261CFD02009E2C72 /* AuthManager.swift */,
 			);
@@ -357,6 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8FCB1F262E558900F54717 /* KeychainWrapper.swift in Sources */,
+				7F8FCB5A262F927900F54717 /* Account.swift in Sources */,
+				7F8FCB5C262F927900F54717 /* Car.swift in Sources */,
 				7FAC7549261D0AB1009E2C72 /* TaskManager.swift in Sources */,
 				7FAC756B261EB26B009E2C72 /* MainView.swift in Sources */,
 				7F8FCB26262E55C300F54717 /* KeychainItemAccessibility.swift in Sources */,
@@ -374,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8FCB20262E558900F54717 /* KeychainWrapper.swift in Sources */,
+				7F8FCB5B262F927900F54717 /* Account.swift in Sources */,
+				7F8FCB5D262F927900F54717 /* Car.swift in Sources */,
 				7FAC754A261D0AB1009E2C72 /* TaskManager.swift in Sources */,
 				7FAC756C261EB26B009E2C72 /* MainView.swift in Sources */,
 				7F8FCB27262E55C300F54717 /* KeychainItemAccessibility.swift in Sources */,
