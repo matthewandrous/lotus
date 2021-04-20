@@ -13,15 +13,25 @@ struct AuthView: View {
     var body: some View {
         
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Spacer()
+            Text("Your Token Status")
+            Text(myAuthManager.TokenSatus())
             TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $token)
             
             Button(action: {
                 myAccount.UpdateToken(newToken: token)
 //                myAccount.addCar()
             }) {
-                Text("Authenticate")
+                Text("Update Token")
             }
+            Spacer()
+            Button(action: {
+                myAuthManager.UpdateToken(newToken: "no-token")
+            }) {
+                Text("Clear Token")
+            }
+            Spacer()
+            
         }
         
     }
