@@ -6,19 +6,35 @@
 //
 
 import Foundation
+import Security
+
 
 let myAuthManager = AuthManager()
 
 class AuthManager: ObservableObject{
-    
-    
     var token = "hello"
     var authHeader = "hello"
-
-    func UpdateToken(newToken: String){
-        token = newToken
-        authHeader = "Bearer " + token
+    
+    init(){
+        authHeader = "Bearer " + (KeychainWrapper.standard.string(forKey: "Token") ?? "no-token")
     }
+    
+
+    
+    func UpdateToken(newToken: String){
+        KeychainWrapper.standard.set(newToken, forKey: "Token")
+        authHeader = "Bearer " + (KeychainWrapper.standard.string(forKey: "Token") ?? "no-token")
+    }
+    
+    func TokenSatus() -> String{
+        let status = KeychainWrapper.standard.string(forKey: "Token") ?? "no-token"
+        if (status == "no-token"){
+            return "No Token Stored"
+        } else {
+            return "Token is " + status
+        }
+    }
+    
 }
 
 
